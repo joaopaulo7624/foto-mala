@@ -1,17 +1,40 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+    color: #333;
+    margin: 0;
+    padding: 20px;
 }
 
 .container {
-    margin-top: 50px;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #007bff;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 15px 30px;
     font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 .progress-bar {
@@ -28,9 +51,15 @@ button {
     width: 0%;
     height: 100%;
     background-color: #4caf50;
+    transition: width 0.5s;
 }
 
 #errorScreen {
     margin-top: 50px;
     color: red;
+    font-size: 1.5em;
+    border: 1px solid red;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffe6e6;
 }
