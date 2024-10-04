@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carregando o Mala</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Descubra o Mala!</h1>
+        <input type="file" id="fileInput" style="display:none;" accept="image/*">
+        <button id="uploadBtn">Carregar Foto do Mala</button>
+        <div id="loadingContainer" style="display:none;">
+            <p id="statusMessage">Foto do mala está sendo carregada...</p>
+            <div class="progress-bar">
+                <div class="progress" id="progressBar"></div>
+            </div>
+        </div>
+        <div id="errorScreen" style="display:none;">
+            <h2>Ops! A imagem era muito pesada!</h2>
+            <p>Você conseguiu queimar nossos servidores!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

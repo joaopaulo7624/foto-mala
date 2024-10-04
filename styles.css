@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    width: 80%;
+    background-color: #ddd;
+    height: 30px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    display: none;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background-color: #4caf50;
+}
+
+#errorScreen {
+    margin-top: 50px;
+    color: red;
+}
