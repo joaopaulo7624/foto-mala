@@ -1,5 +1,4 @@
 document.getElementById('uploadBtn').addEventListener('click', function() {
-    // Aciona o input de arquivo
     document.getElementById('fileInput').click();
 });
 
@@ -7,7 +6,6 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
     let file = event.target.files[0];
     
     if (file) {
-        // Iniciar a barra de carregamento após o usuário selecionar uma imagem
         iniciarCarregamento();
     }
 });
@@ -33,9 +31,17 @@ function iniciarCarregamento() {
 
         if (progress >= 100) {
             clearInterval(interval);
-            // Mostrar tela de erro
             document.getElementById('loadingContainer').style.display = 'none';
-            document.getElementById('errorScreen').style.display = 'block';
+
+            // Animação para a tela de erro
+            const errorScreen = document.getElementById('errorScreen');
+            errorScreen.style.opacity = 0;
+            errorScreen.style.display = 'block';
+
+            // Transição de animação suave
+            setTimeout(() => {
+                errorScreen.style.opacity = 1;
+            }, 10);
         }
-    }, 1000); // Intervalo de 1 segundo entre os "updates"
+    }, 1000);
 }
